@@ -1,0 +1,18 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(","))) if os.getenv("ADMIN_IDS") else []
+
+# Majburiy obuna kanallari
+CHANNEL_1 = os.getenv("CHANNEL_1", "@kanal1")
+CHANNEL_2 = os.getenv("CHANNEL_2", "@kanal2")
+
+# Premium narxi (so'm)
+PREMIUM_PRICE = int(os.getenv("PREMIUM_PRICE", "10000"))
+
+# Admin to'lov kartasi
+PAYMENT_CARD = os.getenv("PAYMENT_CARD", "8600 0000 0000 0000")
+PAYMENT_NAME = os.getenv("PAYMENT_NAME", "Admin ismi")
